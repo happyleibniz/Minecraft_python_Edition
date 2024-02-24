@@ -4,7 +4,7 @@ import pygame
 from pyglet import font
 
 font.add_file('gui/main.ttf')
-mainFont = font.load('gui/main.ttf', 15)
+mainFont = font.load('Minecraft Rus', 15)
 
 pygame.init()
 
