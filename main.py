@@ -1,11 +1,15 @@
 import gc
 import math
 import os
+import sys
 from random import randint
+import multiprocessing
+import threading
+import pickle,marshal
+import pygame.time
 import pyglet
 from OpenGL.GL import *
 from OpenGL.raw.GLU import gluOrtho2D
-
 from functions import drawInfoLabel, getElpsTime, translateSeed
 from game.GUI.Button import Button
 from game.GUI.Editarea import Editarea
@@ -18,6 +22,22 @@ from game.Scene import Scene
 from game.world.Biomes import getBiomeByTemp
 from game.world.worldGenerator import worldGenerator
 from settings import *
+import settings
+
+lang_choose = ["en", "zh"]
+
+
+def choose_langs():
+    global lang_choose, mainFunction
+    with open("gui/lang.mclanguage", "w") as mclanguagefile:
+        if settings.lang_type == "en":
+            mclanguagefile.write("zh")
+        else:
+            mclanguagefile.write("en")
+    pygame.quit()
+    print(os.getcwd())
+    os.system("run.bat")
+    sys.exit()
 
 
 def respawn():
@@ -27,17 +47,20 @@ def respawn():
     player.position = scene.startPlayerPos
     player.lastPlayerPosOnGround = scene.startPlayerPos
 
-
-def quitToMenu():
+def saveWorld(worldGen, save_path):
+    with open(save_path+"/world.dat","wb") as world_data_file:
+        pass
+    print("Successfully saved world ")
+def quit_to_menu():
     global PAUSE, IN_MENU, mainFunction
-
+    saveWorld(scene.worldGen,"saves/Current_world")
     tex = gui.GUI_TEXTURES["options_background"]
     tex2 = gui.GUI_TEXTURES["black"]
-    for x in range(0, scene.WIDTH, tex.width):
-        for y in range(0, scene.HEIGHT, tex.height):
-            tex.blit(x, y)
-            tex2.blit(x, y)
-    drawInfoLabel(scene, "Quitting to main menu", xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2,
+    for scene_x in range(0, scene.WIDTH, tex.width):
+        for scene_y in range(0, scene.HEIGHT, tex.height):
+            tex.blit(scene_x, scene_y)
+            tex2.blit(scene_x, scene_y)
+    drawInfoLabel(scene, translations["quit.mainmenu"], xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2,
                   style=[('', '')], size=12, anchor_x='center')
     pygame.display.flip()
     clock.tick(MAX_FPS)
@@ -58,25 +81,32 @@ def quitToMenu():
     player.playerDead = False
 
     gc.collect()
-    mainFunction = drawMainMenu
+    mainFunction = draw_main_menu
 
 
-def showSettings():
+def show_settings():
     global mainFunction
-    mainFunction = drawSettingsMenu
+    mainFunction = draw_settings_menu
 
 
-def closeSettings():
+def draw_command_function():
     global mainFunction
-    mainFunction = drawMainMenu
+    mainFunction = draw_command
 
 
-def startNewGame():
+def close_settings():
     global mainFunction
+    mainFunction = draw_main_menu
+
+
+def start_new_game():
+    global mainFunction
+    if not os.path.exists("saves/Current_world"):
+        os.makedirs("saves/Current_world")
     sound.musicPlayer.stop()
     sound.initMusic(True)
     scene.worldGen = worldGenerator(scene, translateSeed(seedEditArea.text))
-    mainFunction = genWorld
+    mainFunction = gen_world
 
 
 def pause():
@@ -84,18 +114,29 @@ def pause():
     PAUSE = not PAUSE
     scene.allowEvents["movePlayer"] = True
     scene.allowEvents["keyboardAndMouse"] = True
-    mainFunction = pauseMenu
+    mainFunction = pause_menu
 
 
-def deathScreen():
+def death_screen():
     global PAUSE, mainFunction
     PAUSE = not PAUSE
     scene.allowEvents["movePlayer"] = True
     scene.allowEvents["keyboardAndMouse"] = True
-    mainFunction = drawDeathScreen
+    mainFunction = draw_death_screen
 
 
-def drawSettingsMenu(mc):
+def draw_command(mc):
+    scene.set2d()
+    mp = pygame.mouse.get_pos()
+    _keys = pygame.key.get_pressed()
+    commandEditArea.x = scene.WIDTH // 2 - (commandEditArea.bg.width // 2)
+    commandEditArea.y = scene.HEIGHT // 2 - (commandEditArea.bg.height // 2)
+    commandEditArea.update(mp, mc, _keys)
+    pygame.display.flip()
+    clock.tick(MAX_FPS)
+
+
+def draw_settings_menu(mc):
     scene.set2d()
 
     tex = gui.GUI_TEXTURES["options_background"]
@@ -131,7 +172,7 @@ def drawSettingsMenu(mc):
     clock.tick(MAX_FPS)
 
 
-def drawDeathScreen(mc):
+def draw_death_screen(mc):
     bg = gui.GUI_TEXTURES["red"]
     bg.width = scene.WIDTH
     bg.height = scene.HEIGHT
@@ -139,7 +180,8 @@ def drawDeathScreen(mc):
 
     mp = pygame.mouse.get_pos()
 
-    drawInfoLabel(scene, f"You died!", xx=scene.WIDTH // 2, yy=scene.HEIGHT - scene.HEIGHT // 4, style=[('', '')],
+    drawInfoLabel(scene, translations["player dead"], xx=scene.WIDTH // 2,
+                  yy=scene.HEIGHT - scene.HEIGHT // 4, style=[('', '')],
                   size=34, anchor_x='center')
 
     # Back to Game button
@@ -149,7 +191,7 @@ def drawDeathScreen(mc):
     #
 
     # Quit to title button
-    quitWorldButton.text = "Title screen"
+    quitWorldButton.text = translations["death.titlescreen"]
     quitWorldButton.x = scene.WIDTH // 2 - (quitButton.button.width // 2)
     quitWorldButton.y = scene.HEIGHT // 2 - (quitButton.button.height // 2)
     quitWorldButton.update(mp, mc)
@@ -159,7 +201,7 @@ def drawDeathScreen(mc):
     clock.tick(MAX_FPS)
 
 
-def pauseMenu(mc):
+def pause_menu(mc):
     bg = gui.GUI_TEXTURES["black"]
     bg.width = scene.WIDTH
     bg.height = scene.HEIGHT
@@ -167,7 +209,8 @@ def pauseMenu(mc):
 
     mp = pygame.mouse.get_pos()
 
-    drawInfoLabel(scene, f"Game menu", xx=scene.WIDTH // 2, yy=scene.HEIGHT - scene.HEIGHT // 4, style=[('', '')],
+    drawInfoLabel(scene, translations["game.menu"], xx=scene.WIDTH // 2, yy=scene.HEIGHT - scene.HEIGHT // 4,
+                  style=[('', '')],
                   size=12, anchor_x='center')
 
     # Back to Game button
@@ -177,7 +220,7 @@ def pauseMenu(mc):
     #
 
     # Quit to title button
-    quitWorldButton.text = "Quit to title"
+    quitWorldButton.text = translations["quit.title"]
     quitWorldButton.x = scene.WIDTH // 2 - (quitButton.button.width // 2)
     quitWorldButton.y = scene.HEIGHT // 2 - (quitButton.button.height // 2)
     quitWorldButton.update(mp, mc)
@@ -187,9 +230,9 @@ def pauseMenu(mc):
     clock.tick(MAX_FPS)
 
 
-def genWorld(mc):
+def gen_world(mc):
     global IN_MENU, PAUSE, resizeEvent
-    chunkCnt = 220
+    chunk_cnt = 220
 
     tex = gui.GUI_TEXTURES["options_background"]
     tex2 = gui.GUI_TEXTURES["black"]
@@ -199,22 +242,22 @@ def genWorld(mc):
             tex2.blit(ix, iy)
 
     scene.genWorld()
-    if scene.worldGen.start - len(scene.worldGen.queue) > chunkCnt:
+    if scene.worldGen.start - len(scene.worldGen.queue) > chunk_cnt:
         scene.genTime = 16
         IN_MENU = False
         PAUSE = False
 
-    proc = round((scene.worldGen.start - len(scene.worldGen.queue)) * 100 / chunkCnt)
-    drawInfoLabel(scene, "Loading world...", xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2, style=[('', '')],
+    proc = round((scene.worldGen.start - len(scene.worldGen.queue)) * 100 / chunk_cnt)
+    drawInfoLabel(scene, translations["load.world"], xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2, style=[('', '')],
                   size=12, anchor_x='center')
-    drawInfoLabel(scene, f"Generating terrain {proc}%...", xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2 - 39,
+    drawInfoLabel(scene, translations["gen.terrain"] + f" {proc}%...", xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2 - 39,
                   style=[('', '')], size=12, anchor_x='center')
 
     pygame.display.flip()
     clock.tick(MAX_FPS)
 
 
-def drawMainMenu(mc):
+def draw_main_menu(mc):
     global mainMenuRotation, IN_MENU, PAUSE
     glFogfv(GL_FOG_COLOR, (GLfloat * 4)(0.5, 0.7, 1, 1))
     glFogf(GL_FOG_START, 0)
@@ -242,10 +285,10 @@ def drawMainMenu(mc):
 
     drawInfoLabel(scene, f"Minecraft {MC_VERSION}", xx=10, yy=10, style=[('', '')], size=12)
 
-    # Singleplayer button
-    singleplayerButton.x = scene.WIDTH // 2 - (singleplayerButton.button.width // 2)
-    singleplayerButton.y = scene.HEIGHT // 2 - (singleplayerButton.button.height // 2) - 25
-    singleplayerButton.update(mp, mc)
+    # Single player button
+    singleplayer_button.x = scene.WIDTH // 2 - (singleplayer_button.button.width // 2)
+    singleplayer_button.y = scene.HEIGHT // 2 - (singleplayer_button.button.height // 2) - 25
+    singleplayer_button.update(mp, mc)
     #
 
     # Options button
@@ -260,6 +303,11 @@ def drawMainMenu(mc):
     quitButton.update(mp, mc)
     #
 
+    # language button
+    lang_button.x = scene.WIDTH // 2 - (lang_button.button.width // 2)
+    lang_button.y = scene.HEIGHT // 2 - (lang_button.button.height // 2) + 125
+    lang_button.update(mp, mc)
+
     # Splash
     glPushMatrix()
     glTranslatef((scene.WIDTH // 2 + (tex.width // 2)) - 90, scene.HEIGHT - tex.height - (scene.HEIGHT // 15) + 15, 0.0)
@@ -273,7 +321,6 @@ def drawMainMenu(mc):
 
     pygame.display.flip()
     clock.tick(MAX_FPS)
-
     if mainMenuRotation[0] < 25:
         mainMenuRotation[2] = False
     if mainMenuRotation[0] > 75:
@@ -286,13 +333,35 @@ def drawMainMenu(mc):
     mainMenuRotation[1] += 0.02
 
 
+if settings.DEBUG:
+    print("PyOpenGL version: ", OpenGL.__version__)
+    print("PyOpenGL platform: ", OpenGL.platform)
+    print("PyOpenGL extensions: ", OpenGL.GL.glGetString(OpenGL.GL.GL_EXTENSIONS))
+    print("PyOpenGL renderer: ", OpenGL.GL.glGetString(OpenGL.GL.GL_RENDERER))
+    print("PyOpenGL vendor: ", OpenGL.GL.glGetString(OpenGL.GL.GL_VENDOR))
+    print("PyOpenGL GL version: ", OpenGL.GL.glGetString(OpenGL.GL.GL_VERSION))
+    print("Pygame Version:", pygame.version.ver)
+    print("Pygame array interface:", pygame.get_array_interface)
+    print("Pygame display driver:", pygame.display.get_driver())
+    print("Pygame display info:", pygame.display.Info())
+    print("Pyglet version:", pyglet.version)
+    print("Pyglet platform:", pyglet.compat_platform)
+    print("Pyglet display driver:", pyglet.canvas.get_display())
+    print("Pyglet display info:", pyglet.canvas.get_display().get_default_screen())
+    print("Python Version:", sys.version)
+    print("Python Platform:", sys.platform)
+    print("Python Path:", sys.path)
+    print("Python Executable:", sys.executable)
+    print("PID process: ",os.getpid())
+    print("PATH : ",os.get_exec_path())
+
 print("Loading the game...")
 
 resizeEvent = False
 LAST_SAVED_RESOLUTION = [WIDTH, HEIGHT]
-
+pygame.mixer.pre_init(44100, 16, 2, 4096)
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
-pygame.display.set_caption(f"Minecraft {MC_VERSION}")
+
 
 # Loading screen
 glClearColor(1, 1, 1, 1)
@@ -322,7 +391,7 @@ scene.gui = gui
 scene.sound = sound
 scene.player = player
 
-scene.deathScreen = deathScreen
+scene.deathScreen = death_screen
 scene.initScene()
 
 print("Loading sounds...")
@@ -491,9 +560,10 @@ player.inventory.initWindow()
 
 showInfoLabel = False
 
+
 print("Loading splashes...")
-splfile = open("gui/splashes.txt", "r")
-splash = splfile.read().split("\n")
+splfile = open("gui/splashes.txt", "r", errors='replace')
+splash = (splfile.read().split("\n"))
 splash = splash[randint(0, len(splash) - 1)]
 splfile.close()
 
@@ -501,42 +571,55 @@ sound.musicPlayer.play()
 sound.musicPlayer.set_volume(sound.volume)
 
 # Main menu buttons
-singleplayerButton = Button(scene, "Singleplayer", 0, 0)
-optionsButton = Button(scene, "Options", 0, 0)
-quitButton = Button(scene, "Quit game", 0, 0)
+singleplayer_button = Button(scene, translations["singleplayer"], 0, 0)
+optionsButton = Button(scene, translations["options"], 0, 0)
+quitButton = Button(scene, translations["quit_game"], 0, 0)
+lang_button = Button(scene, translations["gui.lang"], 0, 0)
 
-singleplayerButton.setEvent(startNewGame)
-optionsButton.setEvent(showSettings)
+singleplayer_button.setEvent(start_new_game)
+optionsButton.setEvent(show_settings)
 quitButton.setEvent(exit)
+lang_button.setEvent(choose_langs)
 #
 
 # Settings objects
 closeSettingsButton = Button(scene, "Close", 0, 0)
-soundVolumeSliderBox = Sliderbox(scene, "Sound volume:", 100, 0, 0)
-seedEditArea = Editarea(scene, "World seed", 0, 0)
+soundVolumeSliderBox = Sliderbox(scene, translations["sound.volume"], 100, 0, 0)
+seedEditArea = Editarea(scene, translations["World.Seed"], 0, 0)
+commandEditArea = Editarea(scene, "Commands input here", 0, 0)
 
-closeSettingsButton.setEvent(closeSettings)
+
+def process_command(command):
+    if command.strip() == "/clear":
+        commandEditArea.text = ""
+    elif command.strip() == "/exit":
+        exit()
+
+
+commandEditArea.setEvent(process_command)
+closeSettingsButton.setEvent(close_settings)
 #
 
 # Pause menu buttons
-resumeButton = Button(scene, "Back to Game", 0, 0)
-quitWorldButton = Button(scene, "Quit to title", 0, 0)
+resumeButton = Button(scene, translations["backgame"], 0, 0)
+quitWorldButton = Button(scene, translations["gui.qtt"], 0, 0)
 
 resumeButton.setEvent(pause)
-quitWorldButton.setEvent(quitToMenu)
+quitWorldButton.setEvent(quit_to_menu)
 #
 
 # Death screen buttons
-respawnButton = Button(scene, "Respawn", 0, 0)
+respawnButton = Button(scene, translations["respawn"], 0, 0)
 respawnButton.setEvent(respawn)
 #
 
 print("Loading complete!")
 mainMenuRotation = [50, 180, True]
 
-mainFunction = drawMainMenu
+mainFunction = draw_main_menu
 
 while True:
+    pygame.display.set_caption(f"Minecraft {MC_VERSION} {clock.get_fps() }")
     if scene.allowEvents["keyboardAndMouse"] and not PAUSE:
         if pygame.mouse.get_pressed(3)[0]:
             player.mouseEvent(1)
@@ -605,6 +688,8 @@ while True:
                         player.inventory.activeInventory = 8
                     if event.key == pygame.K_F3:
                         showInfoLabel = not showInfoLabel
+                    if event.key == pygame.K_t and not IN_MENU:
+                        draw_command_function()
                     if event.key == pygame.K_F5:
                         player.cameraType += 1
                         if player.cameraType > 3:

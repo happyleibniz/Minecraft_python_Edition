@@ -13,10 +13,11 @@ from settings import *
 class Player:
     def __init__(self, x=0, y=0, z=0, rotation=[0, 0], gl=None):
         print("Init Player class...")
-
+        
         self.position, self.rotation = [x, y, z], rotation
         self.speed = 0.03
         self.gl = gl
+        self.gl.allowEvents.setdefault("collisions", True)
         self.gravity = 5.8
         self.tVel = 50
         self.dy = 0
@@ -35,7 +36,7 @@ class Player:
         self.playerFallY = 0
 
         self.kW, self.kS, self.kA, self.kD = 0, 0, 0, 0
-
+        self.gl.allowEvents["collisions"] = True
     def setCameraShake(self):
         if not self.canShake or self.shift > 0:
             return
@@ -58,7 +59,9 @@ class Player:
                 self.shift -= 0.05
 
     def updatePosition(self):
-        if self.gl.allowEvents["movePlayer"]:
+        if pygame.key.get_pressed()[pygame.K_p]:
+            self.gl.allowEvents["collisions"] = not self.gl.allowEvents["collisions"]
+        elif self.gl.allowEvents["movePlayer"]:
             rdx, rdy = pygame.mouse.get_pos()
             rdx, rdy = rdx - self.gl.WIDTH // 2, rdy - self.gl.HEIGHT // 2
             rdx /= 8

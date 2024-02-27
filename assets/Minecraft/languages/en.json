@@ -1,0 +1,18 @@
+{
+    "singleplayer": "Singleplayer",
+    "options": "Options",
+    "quit_game": "Quit game",
+    "player dead": "You Died!",
+    "sound.volume" : "Sound Volume",
+    "World.Seed" : "World Seed",
+    "gui.lang" : "Change Language",
+    "death.titlescreen" : "Title Screen",
+    "game.menu" : "Back to Game",
+    "quit.title" : "Quit to title screen",
+    "load.world" : "Loading world...",
+    "gen.terrain" : "Generating terrain ",
+    "backgame" : "Back to Game",
+    "gui.qtt" : "Quit To Title",
+    "respawn" : "Respawn",
+    "quit.mainmenu" : "Quitting to main menu..."
+}

@@ -32,7 +32,7 @@ class GUI:
         self.lbl.x = self.gl.WIDTH // 2
         self.lopacity -= 1
         if self.lopacity < 0:
-            self.lopacity = 1
+            self.lopacity = 255
         else:
             self.shadow_lbl.set_style("color", (56, 56, 56, self.lopacity))
             self.shadow_lbl.draw()

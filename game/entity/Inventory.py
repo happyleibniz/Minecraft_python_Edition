@@ -97,7 +97,14 @@ class Inventory:
             self.inventory[39][0] if self.inventory[39][1] else "",
             self.inventory[40][0] if self.inventory[40][1] else "",
         ])
+        if craftResult == "minecraft:oak_plank":
+            self.inventory[41][0] = 'tnt'
+        else:
+            print("lol:",self.inventory[41])
+            self.inventory[41][0] = 'tnt'
+        print(self.inventory[41]) 
 
+        
         for i in self.window.cellPositions.items():
             xx, yy = self.window.cellPositions[i[0]][0][0], self.window.cellPositions[i[0]][0][1]
 

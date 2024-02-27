@@ -49,7 +49,10 @@ class BlockSound:
 
         bl = len(self.gl.sound.BLOCKS_SOUND["step"][blName])
         chnl = self.gl.sound.BLOCKS_SOUND["step"][blName][randint(0, bl - 1)].play()
-        chnl.set_volume(self.gl.sound.volume)
+        try:
+            chnl.set_volume(self.gl.sound.volume)
+        except:
+            pass
 
     def playBoomSound(self):
         bl = len(self.gl.sound.BLOCKS_SOUND["explode"])
@@ -66,5 +69,13 @@ class BlockSound:
     def playPickUpSound(self):
         if not self.pickUpAlreadyPlayed:
             chnl = self.gl.sound.BLOCKS_SOUND["pickUp"].play()
-            chnl.set_volume(self.gl.sound.volume)
+            try:
+                chnl.set_volume(self.gl.sound.volume)
+            except:
+                pass
             self.pickUpAlreadyPlayed = True
+
+# BUG WHEN PLAYING
+# <UNDONE> chnl.set_volume(self.gl.sound.volume)
+#             ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+# AttributeError: 'NoneType' object has no attribute 'set_volume'

@@ -1,0 +1,18 @@
+{
+    "singleplayer": "单人游戏",
+    "options": "设置",
+    "quit_game": "退出游戏",
+    "player dead" : "你失败了:O",
+    "sound.volume" :  "声音",
+    "World.Seed" : "世界的种子",
+    "gui.lang" : "切换语言",
+    "death.titlescreen": "主界面",
+    "game.menu" : "回到游戏",
+    "quit.title" : "退出到标题屏幕",
+    "load.world" : "正在加载世界...",
+    "gen.terrain" : "正在生成地形中 ",
+    "backgame" : "回到游戏中",
+    "gui.qtt" : "返回主界面",
+    "respawn" : "重生",
+    "quit.mainmenu" : "退出主菜单中..."
+}
