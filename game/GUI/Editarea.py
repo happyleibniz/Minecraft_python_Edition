@@ -12,7 +12,6 @@ class Editarea:
         self.event = None
         self.focused = False
         self.curFade = [1, True]
-
         self.bg = gl.gui.GUI_TEXTURES["edit_bg"]
 
     def update(self, mp, mc, keys):
@@ -34,6 +33,8 @@ class Editarea:
                     self.text = self.text[0:-1]
                 elif i == 13 or i == 27:
                     self.focused = False
+                    if self.event:
+                        self.event(self.text)
                 elif i != 1073742049 and i != 1073742053:
                     if len(self.text) > 26:
                         continue
@@ -64,3 +65,6 @@ class Editarea:
             text = pyglet.text.Label(self.text, font_name='Minecraft Rus')
             drawInfoLabel(self.gl, "_", xx=self.x + 12 + text.content_width, yy=self.gl.HEIGHT - self.y - 25,
                           style=[('', '')], size=12, opacity=self.curFade[0])
+            
+    def setEvent(self, event):  # Add this method
+        self.event = event

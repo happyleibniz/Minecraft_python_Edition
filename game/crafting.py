@@ -8,6 +8,8 @@ def getCraftingItem(objects, tableType=False):
             print("hah")
 
         if ["log_oak", "", "", ""] == objects:
-            print("log")
+            return "minecraft:oak_plank"
+        else:
+            pass
 
     return item

@@ -17,13 +17,19 @@ def load_textures(self):
             if os.path.isdir(d + '/' + file):
                 dirs += [d + '/' + file]
             else:
-                if ".png" not in file or d == "textures/blocks/block_destroy":
+                if ".png" not in file:
                     continue
+
+                image = pyglet.image.load(d + '/' + file)
+                if image.width == 1024 and image.height == 1024 or image.width == 512 and image.height == 512 or image.width == 256 and image.height == 256 or image.width == 128 and image.height == 128:
+                    # Adjust loading method for 1024x textures
+                    texture = image.get_texture()  # Example adjustment for higher resolution
+                elif image.width == 8 and image.height == 8 or image.width == 16 and image.height == 16 or image.width == 32 and image.height == 32 or image.width == 64 and image.height == 64:
+                    # Continue with the existing method for other resolutions
+                    texture = image.get_mipmapped_texture()
 
                 n = file.split('.')[0]
                 self.texture_dir[n] = d
-                image = pyglet.image.load(d + '/' + file)
-                texture = image.get_mipmapped_texture()
                 self.texture[n] = pyglet.graphics.TextureGroup(texture)
                 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
 
