@@ -7,9 +7,9 @@ REQUIREMENTS:
 
 ```pyglet==1.5.28```
 
-```numpy==1.19.3```
+```numpy```
 
-```pygame==2.0.1```
+```pygame```
 
 keys:
 
@@ -25,6 +25,7 @@ keys:
 
 ```Esc```:pause the game ⏸️
 
+```p```:enter spectator mode
 
 ⚠️WARNING⚠️
 
