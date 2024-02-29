@@ -5,7 +5,7 @@ import pyglet
 from OpenGL.GL import *
 
 from game.blocks.BlockEvent import *
-from functions import roundPos, flatten, cube_vertices
+from functions import roundPos
 from game.blocks.DestroyBlock import DestroyBlock
 from settings import *
 
@@ -59,8 +59,11 @@ class Player:
                 self.shift -= 0.05
 
     def updatePosition(self):
-        if pygame.key.get_pressed()[pygame.K_p]:
+        if key[pygame.K_p]:
             self.is_spectator = not self.is_spectator
+        if key[pygame.K_l]:
+            pass
+
         if self.gl.allowEvents["movePlayer"]:
             rdx, rdy = pygame.mouse.get_pos()
             rdx, rdy = rdx - self.gl.WIDTH // 2, rdy - self.gl.HEIGHT // 2
