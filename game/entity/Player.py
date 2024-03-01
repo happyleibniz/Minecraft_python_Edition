@@ -59,9 +59,9 @@ class Player:
                 self.shift -= 0.05
 
     def updatePosition(self):
-        if key[pygame.K_p]:
+        if pygame.key.get_pressed()[pygame.K_p]:
             self.is_spectator = not self.is_spectator
-        if key[pygame.K_l]:
+        if pygame.key.get_pressed()[pygame.K_l]:
             pass
 
         if self.gl.allowEvents["movePlayer"]:
