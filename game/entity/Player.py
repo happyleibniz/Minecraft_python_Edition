@@ -62,7 +62,16 @@ class Player:
         if pygame.key.get_pressed()[pygame.K_p]:
             self.is_spectator = not self.is_spectator
         if pygame.key.get_pressed()[pygame.K_l]:
-            pass
+            self.gl.player.inventory.addBlock("grass")
+            self.gl.player.inventory.addBlock("stone")
+            self.gl.player.inventory.addBlock("sand")
+            self.gl.player.inventory.addBlock("cactus")
+            self.gl.player.inventory.addBlock("water")
+            self.gl.player.inventory.addBlock("crafting_table")
+            self.gl.player.inventory.addBlock("bedrock")
+            self.gl.player.inventory.addBlock("cobblestone")
+            self.gl.player.inventory.addBlock("tnt")
+            self.gl.player.inventory.addBlock("log_oak")
 
         if self.gl.allowEvents["movePlayer"]:
             rdx, rdy = pygame.mouse.get_pos()
