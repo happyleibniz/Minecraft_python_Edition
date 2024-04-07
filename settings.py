@@ -28,10 +28,10 @@ pygame.init()
 monitor = pygame.display.Info()
 WIDTH = 927  # monitor.current_w
 HEIGHT = 566  # monitor.current_h
-MAX_FPS = 120
+MAX_FPS = 200
 PAUSE = True
 IN_MENU = True
-MC_VERSION = "1.0"
+MC_VERSION = "Pre Classic 0.43"
 clock = pygame.time.Clock()
 DEBUG = True
 FOV = 100

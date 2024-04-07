@@ -3,7 +3,7 @@ from random import randint
 
 import pyglet
 from pyglet.gl import GL_QUADS
-
+import pygame
 from game.GUI.ModalWindow import ModalWindow
 from game.crafting import getCraftingItem
 from settings import *
@@ -30,6 +30,12 @@ class Inventory:
                                                     color=(255, 255, 255, 255),
                                                     font_size=10,
                                                     x=self.gl.WIDTH // 2, y=60)
+    def clearCraftingSlots(self):
+        for slot in range(37,42):
+            self.inventory[slot] = ["", 0]
+
+    def get_inventory_blocks(self):
+        return self.inventory
 
     def initWindow(self):
         self.window = ModalWindow(self.gl)
@@ -96,15 +102,36 @@ class Inventory:
             self.inventory[38][0] if self.inventory[38][1] else "",
             self.inventory[39][0] if self.inventory[39][1] else "",
             self.inventory[40][0] if self.inventory[40][1] else "",
+        ],numbers = [
+            self.inventory[37][1] if self.inventory[37][1] else "",
+            self.inventory[38][1] if self.inventory[38][1] else "",
+            self.inventory[39][1] if self.inventory[39][1] else "",
+            self.inventory[40][1] if self.inventory[40][1] else "",
         ])
-        if craftResult == "minecraft:oak_plank":
-            self.inventory[41][0] = 'tnt'
-        else:
-            print("lol:",self.inventory[41])
-            self.inventory[41][0] = 'tnt'
-        print(self.inventory[41]) 
+        print(self.draggingItem)
+        if str(craftResult[0]) == "crafting_table":
+            self.inventory[41] = craftResult
+            try:
+                if self.inventory[41] and self.draggingItem[1]:
+                    self.draggingItem = ['crafting_table', int(craftResult[1])]
+                    self.clearCraftingSlots()
+                else:
+                    pass
+            except IndexError:
+                pass
+        if str(craftResult[0]) == "planks_oak":
+            self.inventory[41] = craftResult
+            print(self.inventory[41])
+            try:
+                if self.inventory[41] and self.draggingItem[1]:
+                    self.draggingItem = ['planks_oak', int(craftResult[1])]
+                    self.clearCraftingSlots()
+                else:
+                    pass
+            except IndexError:
+                pass
+            
 
-        
         for i in self.window.cellPositions.items():
             xx, yy = self.window.cellPositions[i[0]][0][0], self.window.cellPositions[i[0]][0][1]
 

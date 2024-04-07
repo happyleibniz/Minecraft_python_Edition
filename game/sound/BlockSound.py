@@ -1,5 +1,6 @@
 from random import randint
-
+import traceback
+import logging
 
 class BlockSound:
     def __init__(self, gl):
@@ -51,8 +52,12 @@ class BlockSound:
         chnl = self.gl.sound.BLOCKS_SOUND["step"][blName][randint(0, bl - 1)].play()
         try:
             chnl.set_volume(self.gl.sound.volume)
-        except:
-            pass
+        except Exception as e:
+            print(e)
+            print("Beginning Error Report...")
+            print("at ",end=" ")
+            print(traceback.format_exc())
+            print("End Error Report")
 
     def playBoomSound(self):
         bl = len(self.gl.sound.BLOCKS_SOUND["explode"])
@@ -64,7 +69,14 @@ class BlockSound:
 
         bl = len(self.gl.sound.BLOCKS_SOUND["dig"][blName])
         chnl = self.gl.sound.BLOCKS_SOUND["dig"][blName][randint(0, bl - 1)].play()
-        chnl.set_volume(self.gl.sound.volume)
+        try:
+            chnl.set_volume(self.gl.sound.volume)
+        except Exception as e:
+            print(e)
+            print("Beginning Error Report...")
+            print("at ",end=" ")
+            print(traceback.format_exc())
+            print("End Error Report")
 
     def playPickUpSound(self):
         if not self.pickUpAlreadyPlayed:
@@ -75,7 +87,7 @@ class BlockSound:
                 pass
             self.pickUpAlreadyPlayed = True
 
-# BUG WHEN PLAYING
+# BUG WHEN PLAYING TODO
 # <UNDONE> chnl.set_volume(self.gl.sound.volume)
 #             ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # AttributeError: 'NoneType' object has no attribute 'set_volume'

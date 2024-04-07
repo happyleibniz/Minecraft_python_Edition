@@ -15,7 +15,7 @@ class Player:
         print("Init Player class...")
         self.is_spectator = False
         self.position, self.rotation = [x, y, z], rotation
-        self.speed = 0.03
+        self.speed = 0.02
         self.gl = gl
         self.gl.allowEvents.setdefault("collisions", True)
         self.gravity = 5.8
@@ -37,6 +37,7 @@ class Player:
 
         self.kW, self.kS, self.kA, self.kD = 0, 0, 0, 0
         self.gl.allowEvents["collisions"] = True
+
     def setCameraShake(self):
         if not self.canShake or self.shift > 0:
             return
@@ -64,12 +65,12 @@ class Player:
         if pygame.key.get_pressed()[pygame.K_l]:
             self.gl.player.inventory.addBlock("grass")
             self.gl.player.inventory.addBlock("stone")
-            self.gl.player.inventory.addBlock("sand")
+            self.gl.player.inventory.addBlock("log_birch")
             self.gl.player.inventory.addBlock("cactus")
             self.gl.player.inventory.addBlock("water")
             self.gl.player.inventory.addBlock("crafting_table")
-            self.gl.player.inventory.addBlock("bedrock")
-            self.gl.player.inventory.addBlock("cobblestone")
+            self.gl.player.inventory.addBlock("debug")
+            self.gl.player.inventory.addBlock("ancient_debris")
             self.gl.player.inventory.addBlock("tnt")
             self.gl.player.inventory.addBlock("log_oak")
 
@@ -244,9 +245,9 @@ class Player:
 
                 self.bInAir = False
                 self.gl.particles.addParticle((col[0], col[1] - 1, col[2]),
-                                            self.gl.cubes.cubes[col2],
-                                            direction="down",
-                                            count=10)
+                                              self.gl.cubes.cubes[col2],
+                                              direction="down",
+                                              count=10)
             self.position = col
 
     def dead(self):

@@ -1,6 +1,7 @@
 import gc
 import math
 import os
+import pickle
 import sys
 from random import randint
 import pygame.time
@@ -11,7 +12,7 @@ from functions import drawInfoLabel, getElpsTime, translateSeed
 from game.GUI.Button import Button
 from game.GUI.Editarea import Editarea
 from game.GUI.GUI import GUI
-from game.GUI.Sliderbox import Sliderbox
+from game.GUI.Sliderbox import Sliderbox 
 from game.entity.Player import Player
 from game.sound.BlockSound import BlockSound
 from game.sound.Sound import Sound
@@ -20,16 +21,8 @@ from game.world.Biomes import getBiomeByTemp
 from game.world.worldGenerator import worldGenerator
 from settings import *
 import settings
-try:
-    import ctypes
-    ctypes.windll.kernel32.SetProcessWorkingSetSize(ctypes.windll.kernel32.GetCurrentProcess(), -1, 1024*1024*1024)
-except Exception:
-    pass
-try:
-    import resource
-    resource.setrlimit(resource.RLIMIT_AS, (1e9, 1e9))
-except ModuleNotFoundError:
-    pass
+from game.Mod.forge import mod_loader
+
 lang_choose = ["en", "zh"]
 
 
@@ -53,13 +46,17 @@ def respawn():
     player.position = scene.startPlayerPos
     player.lastPlayerPosOnGround = scene.startPlayerPos
 
+
 def saveWorld(worldGen, save_path):
-    with open(save_path+"/world.dat","wb") as world_data_file:
-        pass
+    blocks = worldGen.blocks
+    with open(save_path + "/world.dat", "wb") as world_data_file:
+        pickle.dump(blocks, world_data_file,protocol=pickle.HIGHEST_PROTOCOL)
     print("Successfully saved world ")
+
+
 def quit_to_menu():
     global PAUSE, IN_MENU, mainFunction
-    saveWorld(scene.worldGen,"saves/Current_world")
+    saveWorld(scene.worldGen, "saves/Current_world")
     tex = gui.GUI_TEXTURES["options_background"]
     tex2 = gui.GUI_TEXTURES["black"]
     for scene_x in range(0, scene.WIDTH, tex.width):
@@ -358,8 +355,8 @@ if settings.DEBUG:
     print("Python Platform:", sys.platform)
     print("Python Path:", sys.path)
     print("Python Executable:", sys.executable)
-    print("PID process: ",os.getpid())
-    print("PATH : ",os.get_exec_path())
+    print("PID process: ", os.getpid())
+    print("PATH : ", os.get_exec_path())
 
 print("Loading the game...")
 
@@ -367,7 +364,6 @@ resizeEvent = False
 LAST_SAVED_RESOLUTION = [WIDTH, HEIGHT]
 pygame.mixer.pre_init(44100, 16, 2, 4096)
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
-
 
 # Loading screen
 glClearColor(1, 1, 1, 1)
@@ -399,6 +395,8 @@ scene.player = player
 
 scene.deathScreen = death_screen
 scene.initScene()
+ModLoader = mod_loader.ModLoader(gl=scene, sound=sound, settings=settings, player=player, gui=gui, gc=gc)
+ModLoader.try_better()
 
 print("Loading sounds...")
 sound.BLOCKS_SOUND["pickUp"] = pygame.mixer.Sound("sounds/pick.mp3")
@@ -566,7 +564,6 @@ player.inventory.initWindow()
 
 showInfoLabel = False
 
-
 print("Loading splashes...")
 splfile = open("gui/splashes.txt", "r", errors='replace')
 splash = (splfile.read().split("\n"))
@@ -625,7 +622,7 @@ mainMenuRotation = [50, 180, True]
 mainFunction = draw_main_menu
 
 while True:
-    pygame.display.set_caption(f"Minecraft {MC_VERSION} {clock.get_fps() }")
+    pygame.display.set_caption(f"Minecraft {MC_VERSION} {clock.get_fps()}")
     if scene.allowEvents["keyboardAndMouse"] and not PAUSE:
         if pygame.mouse.get_pressed(3)[0]:
             player.mouseEvent(1)

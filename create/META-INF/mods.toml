@@ -1,0 +1,26 @@
+modLoader="javafml" 
+loaderVersion="[28,)" 
+#issueTrackerURL=""
+
+[[mods]] 
+modId="create"
+version="0.1.1a"
+displayName="Create" 
+#updateJSONURL=""
+authors="simibubi" 
+description='''
+A handful of additions to aid the creative survivalist.'''
+
+[[dependencies.create]] 
+    modId="forge"
+    mandatory=true 
+    versionRange="[28.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.create]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"

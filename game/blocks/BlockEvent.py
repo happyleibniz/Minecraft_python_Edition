@@ -4,7 +4,7 @@ from game.world.Explosion import Explosion
 
 def openBlockInventory(playerClass, blockClass, gl):
     if blockClass.name == "crafting_table":
-        craftingtable = CraftingTable(playerClass, blockClass)
+        craftingtable = CraftingTable(playerClass, blockClass,gl)
 
     if blockClass.name == "tnt":
         gl.blockSound.playBoomSound()

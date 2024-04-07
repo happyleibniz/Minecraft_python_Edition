@@ -5,6 +5,7 @@ from game.world.Biomes import Biomes, getBiomeByTemp
 from game.world.PerlinNoise import PerlinNoise
 from settings import *
 
+
 class worldGenerator:
     def __init__(self, glClass, seed=43242):
         self.seed = seed
@@ -23,7 +24,6 @@ class worldGenerator:
         self.start = len(self.queue)
         self.blocks = {}
         self.loading = deque()
-        
 
     def add(self, p, t):
         if p in self.blocks:
@@ -46,7 +46,7 @@ class worldGenerator:
     def gen(self, xx, zz):
         sy = CHUNK_SIZE[1]
         oldY = 0
-        self.genOre(-2.0,59.75,-2.0)
+        self.genOre(-2.0, 59.75, -2.0)
         for x in range(xx, xx + CHUNK_SIZE[0]):
             for z in range(zz, zz + CHUNK_SIZE[2]):
                 y = self.worldPerlin(x, z)
@@ -102,7 +102,7 @@ class worldGenerator:
         if y < 20:
             _diamond = random.randint(0, 150)
             if _diamond > 54:
-                print("diamond generated at ",_diamond)
+                print("diamond generated at ", _diamond)
                 return "diamond_ore"
             if random.randint(0, 1000) > 54:
                 return "emerald_ore"
