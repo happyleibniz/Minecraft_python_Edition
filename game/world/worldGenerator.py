@@ -1,6 +1,6 @@
 import random
 from collections import deque
-
+from mobs.cow import Cow as Cow
 from game.world.Biomes import Biomes, getBiomeByTemp
 from game.world.PerlinNoise import PerlinNoise
 from settings import *
@@ -8,6 +8,7 @@ from settings import *
 
 class worldGenerator:
     def __init__(self, glClass, seed=43242):
+        self.cow = None
         self.seed = seed
         self.chunks = {}
         self.worldPerlin = PerlinNoise(seed, mh=8)
@@ -42,6 +43,14 @@ class worldGenerator:
             while self.loading:
                 p, t = self.loading.popleft()
                 self.gl.cubes.updateCube(self.gl.cubes.cubes[p])
+
+            # Check if chunk loading is complete
+        if not self.queue and not self.loading:
+            # Chunk loading is complete, instantiate cow
+            # Set the position for the cow (you can adjust the position as needed)
+            cow_position = (player.position[0], player.position[1], player.position[2])
+            self.cow = Cow(cow_position)
+            self.gl.cubes.add(cow_position, self.cow.appearance)
 
     def gen(self, xx, zz):
         sy = CHUNK_SIZE[1]

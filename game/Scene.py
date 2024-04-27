@@ -1,6 +1,7 @@
 import gc
 import threading
 
+import pyglet.image
 from OpenGL.GLU import *
 from pyglet.gl import *
 
@@ -18,6 +19,7 @@ from game.blocks.CubeHandler import CubeHandler
 
 class Scene:
     def __init__(self):
+        self.zombie_leg_texture = {}
         print("Init Scene class...")
 
         self.WIDTH, self.HEIGHT = WIDTH, HEIGHT
@@ -36,6 +38,7 @@ class Scene:
         self.entity = []
         self.skyColor = [128, 179, 255]  # [64, 89, 150]
         self.panorama = {}
+        self.zombie_head_texture = {}
         self.in_water = False
 
         self.resetScene()
@@ -68,7 +71,30 @@ class Scene:
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
+
+        self.loadZombieHeadTextures()
+
+    def loadZombieHeadTextures(self):
+        print("Loading Zombie Textures(Beta test)...")
+        for e, i in enumerate(os.listdir("textures/zombie/")):
+            self.zombie_head_texture[e] = \
+                pyglet.graphics.TextureGroup(pyglet.image.load("textures/zombie/" + i).get_texture())
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
+        self.loadZombieLegTextures()
             
+    def loadZombieLegTextures(self):
+        for e, i in enumerate(os.listdir("textures/zombie_leg")):
+            self.zombie_leg_texture[e] = \
+                pyglet.graphics.TextureGroup(pyglet.image.load("textures/zombie_leg/" + i).get_texture())
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
+
+
 
     def vertexList(self):
         x, y, w, h = self.WIDTH / 2, self.HEIGHT / 2, self.WIDTH, self.HEIGHT
@@ -106,7 +132,7 @@ class Scene:
                                  ('leaves_taiga', 'leaves_oak', 'tall_grass', 'nocolor'), self)
 
         self.zombie = Zombie(self)
-        self.zombie.position = [0, 53, 0]
+        self.zombie.position = [0, 100, 0]
         self.entity.append(self.zombie)
 
         self.set3d()
@@ -128,6 +154,9 @@ class Scene:
             self.HEIGHT = h
         self.vertexList()
         glViewport(0, 0, w, h)
+
+    def drawZombie(self):
+        pass
 
     def drawPanorama(self):
         # self.resizeCGL(256, 256, changeRes=False)
