@@ -63,11 +63,27 @@ class DestroyBlock:
             self.destroyPos = blockByVec[0]
 
         if blockName != "bedrock":
-            self.destroyStage += 0.1
+            if blockName == "grass" or blockName == "dirt" or blockName == "gravel":
+                self.destroyStage += 0.05
+            elif blockName == "sand":
+                self.destroyStage += 0.055
+            elif blockName == "sandstone":
+                self.destroyStage += 0.01
+            elif blockName == "leaves_oak":
+                self.destroyStage += 0.15
+            elif blockName == "log_oak":
+                self.destroyStage += 0.15
+            elif blockName == "stone":
+                self.destroyStage += 0.009
+            elif blockName == "cobblestone":
+                self.destroyStage += 0.006
+            else:
+                self.destroyStage += 1
 
         if self.destroyStage > 9:
             self.destroyStage = -1
             if blockByVec[0] in self.gl.cubes.cubes:
+                print(self.gl.cubes.cubes[blockByVec[0]].name)
                 self.gl.droppedBlock.addBlock(blockByVec[0], self.gl.cubes.cubes[blockByVec[0]].name)
 
             self.gl.blockSound.playBlockSound(self.gl.cubes.cubes[blockByVec[0]].name)

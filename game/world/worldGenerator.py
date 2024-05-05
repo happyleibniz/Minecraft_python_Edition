@@ -44,14 +44,6 @@ class worldGenerator:
                 p, t = self.loading.popleft()
                 self.gl.cubes.updateCube(self.gl.cubes.cubes[p])
 
-            # Check if chunk loading is complete
-        if not self.queue and not self.loading:
-            # Chunk loading is complete, instantiate cow
-            # Set the position for the cow (you can adjust the position as needed)
-            cow_position = (player.position[0], player.position[1], player.position[2])
-            self.cow = Cow(cow_position)
-            self.gl.cubes.add(cow_position, self.cow.appearance)
-
     def gen(self, xx, zz):
         sy = CHUNK_SIZE[1]
         oldY = 0
@@ -109,15 +101,15 @@ class worldGenerator:
 
     def getOreByY(self, y):
         if y < 20:
-            _diamond = random.randint(0, 150)
+            _diamond = random.randint(1, 1176)
             if _diamond > 54:
                 print("diamond generated at ", _diamond)
                 return "diamond_ore"
-            if random.randint(0, 1000) > 54:
+            if random.randint(1, 1234) > 54:
                 return "emerald_ore"
-            if random.randint(0, 180) < 54:
+            if random.randint(1, 16) < 54:
                 return "redstone_ore"
-        elif y < 40:
+        elif y < 96:
             if random.randint(0, 180) == 54:
                 return "gold_ore"
         if random.randint(0, 100) < 54:

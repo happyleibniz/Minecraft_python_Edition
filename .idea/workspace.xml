@@ -5,30 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52176ae8-8e8e-410c-afa1-6f419bed732a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/textures/blocks/cow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie/zombie_head_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_leg/leg_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zombie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Minecraft_python_Edition-main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/panorama.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/world/worldgen/Dungeons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/edition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/game_logo_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_half_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/music/game/pop1.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sounds/music/menu/menu5.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Minecraft/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Minecraft/languages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Minecraft/languages/zh.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Minecraft/languages/zh.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/GUI/Button.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/GUI/Button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/Scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/Scene.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/entity/Entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Entity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/blocks/DestroyBlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/blocks/DestroyBlock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/entity/Inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/entity/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/entity/Zombie.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Zombie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/world/Biomes.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/Biomes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/world/PerlinNoise.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/PerlinNoise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/world/worldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/worldGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/game_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/game_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minecraft_main_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft_main_program.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saves/Current_world/world.dat" beforeDir="false" afterPath="$PROJECT_DIR$/saves/Current_world/world.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/brick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/cobblestone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/cobblestone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/dirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/dirt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/emerald_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/emerald_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/glass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/glowstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/glowstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/gold_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/gold_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/iron_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/iron_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/redstone_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/redstone_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blocks/stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/stone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/water.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/water.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/zombie_leg/zombie_leg.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +98,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.Player.executor&quot;: &quot;Run&quot;,
-    &quot;Python.minecraft_main_program.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;creative-test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/leibniz/Desktop/Documents/all python/Minecraft_python_Edition/minecraft_main_program.py&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Inventory.executor": "Run",
+    "Python.PerlinNoise.executor": "Run",
+    "Python.Player.executor": "Run",
+    "Python.minecraft_main_program.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Mob-Test1",
+    "last_opened_file_path": "C:/Users/leibniz/Desktop/Documents/all python/Minecraft_python_Edition/minecraft_main_program.py"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\assets\Minecraft\textures\gui\title\background" />
+      <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\assets\Minecraft\textures\gui\title\background\16x" />
       <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\" />
       <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\game\Mod\forge" />
     </key>
@@ -183,58 +233,72 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>65</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>67</line>
+          <line>69</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>66</line>
+          <line>68</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>68</line>
+          <line>70</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>69</line>
+          <line>71</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>70</line>
+          <line>72</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>71</line>
+          <line>73</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>72</line>
+          <line>74</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>73</line>
+          <line>75</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/entity/Player.py</url>
-          <line>74</line>
+          <line>76</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/Scene.py</url>
-          <line>76</line>
+          <line>78</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game/Scene.py</url>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game/blocks/DestroyBlock.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/minecraft_main_program.py</url>
+          <line>682</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

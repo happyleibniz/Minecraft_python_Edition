@@ -6,6 +6,8 @@ def getBiomeByTemp(temp):
         return all_biomes[0]  # Forest
     if temp > 30:
         return all_biomes[1]  # Desert
+    if 7.5 > temp > 6:
+        return all_biomes[2]
     if 5 > temp > -5:
         return all_biomes[4]  # mountains
     if 3 > temp > -3:
@@ -22,7 +24,7 @@ class Biomes:
         if self.biome == "desert":
             return "sand"
         if self.biome == "ocean":
-            return "dirt"
+            return "water"
         if self.biome == "forest" or self.biome == "taiga" or self.biome == "mountains":
             return "grass"
         if self.biome == "big_mountains":
@@ -51,6 +53,6 @@ class Biomes:
         if self.biome == "forest" or self.biome == "taiga" or self.biome == "mountains":
             return "stone"
         if self.biome == "ocean":
-            return "water"
+            return "gravel"
         if self.biome == "big_mountains":
             return "stone"

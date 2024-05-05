@@ -11,11 +11,13 @@ from settings import *
 
 
 class Player:
-    def __init__(self, x=0, y=0, z=0, rotation=[0, 0], gl=None):
+    def __init__(self, x=0, y=0, z=0, rotation=None, gl=None):
+        if rotation is None:
+            rotation = [0, 0]
         print("Init Player class...")
         self.is_spectator = False
         self.position, self.rotation = [x, y, z], rotation
-        self.speed = 0.02
+        self.speed = 0.06
         self.gl = gl
         self.gl.allowEvents.setdefault("collisions", True)
         self.gravity = 5.8
@@ -127,17 +129,17 @@ class Player:
                     self.kD -= minKd
             if key[pygame.K_SPACE]:
                 if self.is_spectator:
-                    self.position[1] += 0.05
+                    self.position[1] += 0.08
                 else:
                     self.jump()
                     if key[pygame.K_w]:
-                        self.kW = 1
+                        self.kW = 2
                     if key[pygame.K_a]:
-                        self.kA = 1
+                        self.kA = 2
                     if key[pygame.K_s]:
-                        self.kS = 1
+                        self.kS = 2
                     if key[pygame.K_d]:
-                        self.kD = 1
+                        self.kD = 2
             if key[pygame.K_LSHIFT]:
                 if self.is_spectator:
                     self.position[1] -= 0.05
@@ -146,8 +148,7 @@ class Player:
                     self.acceleration = -0.01
             else:
                 self.setShift(False)
-                if self.acceleration == -0.01:
-                    self.acceleration = 0
+                self.acceleration = 0
 
             dt = self.speed
 
@@ -175,6 +176,7 @@ class Player:
             self.dy = 4
 
     def move(self, dt, dx, dy, dz):
+        dt = 0.009
         if self.is_spectator:
             dt = 0
         else:

@@ -58,7 +58,7 @@ class Inventory:
         x += 36
         self.window.cellPositions[40] = [(x, y), None]
 
-        self.window.cellPositions[41] = [(308, 56), None]  # TODO: crafting table in inventory
+        self.window.cellPositions[41] = [(308, 56), None]  # TODO: crafting table in inventory  # DONE
 
         x, y = 16, 168
         for i in range(9 * 3, 0, -1):

@@ -28,14 +28,16 @@ pygame.init()
 monitor = pygame.display.Info()
 WIDTH = 927  # monitor.current_w
 HEIGHT = 566  # monitor.current_h
-MAX_FPS = 200
+WIDTH = 854
+HEIGHT = 480
+MAX_FPS = 900000000000000000000000000000000000000000000000000000000000000000000
 PAUSE = True
 IN_MENU = True
-MC_VERSION = "Pre Classic 0.43"
+MC_VERSION = "Pre Classic 0.48"
 clock = pygame.time.Clock()
 DEBUG = True
 FOV = 100
-RENDER_DISTANCE = 999
+RENDER_DISTANCE = 192
 
 CHUNKS_RENDER_DISTANCE = 900
 CHUNK_SIZE = (4, 60, 4)

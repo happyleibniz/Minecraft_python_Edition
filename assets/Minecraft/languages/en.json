@@ -14,5 +14,6 @@
     "backgame" : "Back to Game",
     "gui.qtt" : "Quit To Title",
     "respawn" : "Respawn",
-    "quit.mainmenu" : "Quitting to main menu..."
+    "quit.mainmenu" : "Quitting to main menu...",
+    "ed.pano" : "Edit Panorame(pre alpha)"
 }

@@ -19,7 +19,9 @@ from game.blocks.CubeHandler import CubeHandler
 
 class Scene:
     def __init__(self):
+        self.zombie_clothes_texture = {}
         self.zombie_leg_texture = {}
+        self.zombie_hand_texture = {}
         print("Init Scene class...")
 
         self.WIDTH, self.HEIGHT = WIDTH, HEIGHT
@@ -64,10 +66,10 @@ class Scene:
 
     def loadPanoramaTextures(self):
         print("Loading panorama textures...")
-        for e, i in enumerate(os.listdir("gui/bg/")):
+        for e, i in enumerate(os.listdir(str(open("assets/Minecraft/panorama.txt", "r+").read()))):
             self.panorama[e] = \
-                pyglet.graphics.TextureGroup(pyglet.image.load("gui/bg/" + i).get_texture())
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
+                pyglet.graphics.TextureGroup(pyglet.image.load(str(open("assets/Minecraft/panorama.txt", "r+").read()) + i).get_texture())
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)  # GL_LINEAR
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
@@ -87,8 +89,31 @@ class Scene:
             
     def loadZombieLegTextures(self):
         for e, i in enumerate(os.listdir("textures/zombie_leg")):
+            __secret_texture = pyglet.image.load("textures/zombie_leg/" + i).get_texture()
+            __secret_flipped_texture = __secret_texture.get_texture().get_transform(flip_x=True)
             self.zombie_leg_texture[e] = \
-                pyglet.graphics.TextureGroup(pyglet.image.load("textures/zombie_leg/" + i).get_texture())
+                pyglet.graphics.TextureGroup(__secret_texture)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
+        self.loadZombieClothesTextures()
+        
+    def loadZombieClothesTextures(self):
+        for e, i in enumerate(os.listdir("textures/zombie_clothes")):
+            __secret_texture = pyglet.image.load("textures/zombie_clothes/" + i).get_texture()
+            self.zombie_clothes_texture[e] = \
+                pyglet.graphics.TextureGroup(__secret_texture)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE)
+        self.loadZombieHandTextures()
+    def loadZombieHandTextures(self):
+        for e, i in enumerate(os.listdir("textures/zombie_hand")):
+            __secret_texture = pyglet.image.load("textures/zombie_hand/" + i).get_texture()
+            self.zombie_hand_texture[e] = \
+                pyglet.graphics.TextureGroup(__secret_texture)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)
@@ -201,7 +226,7 @@ class Scene:
         self.drawCounter += 1
         if self.drawCounter > self.genTime:
             self.drawCounter = 0
-            self.worldGen.genChunk(self.player)
+        self.worldGen.genChunk(self.player)
 
     def updateScene(self):
 
@@ -265,6 +290,8 @@ class Scene:
         self.transparent.draw()
         glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE)
         self.transparent.draw()
-
-        self.stuffBatch.draw()
+        try:
+            self.stuffBatch.draw()
+        except pyglet.gl.lib.GLException:
+            print("pyglet.gl.lib.GLException: b'invalid value'")
         self.stuffBatch = pyglet.graphics.Batch()

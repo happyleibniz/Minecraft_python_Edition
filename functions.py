@@ -1,6 +1,8 @@
 import os
 import time
 from random import randint
+
+import pygame.display
 import pyglet
 from OpenGL.GL import *
 from settings import *
@@ -134,8 +136,8 @@ def drawInfoLabel(gl, text, xx=0, yy=0, style=None, size=15, anchor_x='left', an
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
         if shadow:
-            shadow_lbl.draw()
-        lbl.draw()
+            shadow_lbl.draw()  # TODO:pyglet.gl.lib.GLException: b'invalid value'
+            lbl.draw()
         if rotate:
             glRotatef(-rotate, 0.0, 0.0, 1.0)
         y -= 21
