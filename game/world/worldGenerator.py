@@ -4,10 +4,12 @@ from mobs.cow import Cow as Cow
 from game.world.Biomes import Biomes, getBiomeByTemp
 from game.world.PerlinNoise import PerlinNoise
 from settings import *
+import pickle
 
 
 class worldGenerator:
-    def __init__(self, glClass, seed=43242):
+    def __init__(self, glClass, seed=43242, world=None):
+        self.world = open('saves/Current_world/world.dat', 'rb').read()
         self.cow = None
         self.seed = seed
         self.chunks = {}
@@ -23,7 +25,7 @@ class worldGenerator:
         self.queue = deque(q)
 
         self.start = len(self.queue)
-        self.blocks = {}
+        self.blocks = {}  # dict(pickle.loads(self.world))
         self.loading = deque()
 
     def add(self, p, t):
@@ -39,7 +41,6 @@ class worldGenerator:
 
         if self.queue:
             self.gen(*self.queue.popleft())
-
             while self.loading:
                 p, t = self.loading.popleft()
                 self.gl.cubes.updateCube(self.gl.cubes.cubes[p])

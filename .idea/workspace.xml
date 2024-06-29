@@ -5,81 +5,814 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52176ae8-8e8e-410c-afa1-6f419bed732a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/panorama.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/120x/panorama_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/16x/panorama_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Minecraft/textures/gui/title/background/17x/panorama_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/world/worldgen/Dungeons.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/edition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/game_logo_old.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover_half_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/music/game/pop1.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/music/menu/menu5.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_clothes/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textures/zombie_hand/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/dfjklceftuioefuioiofjio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/fragment_shader.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/rtc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sfg9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sp2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sp3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sp4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/sp5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/space.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/stg7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/vertex_shader.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbiwarning/yee.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/load.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/mojang_studios.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/mojang_studios.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-06_18-32-56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-06_18-33-48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-06_18-43-54.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-06_18-49-51.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-06_18-50-39.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-09_21-11-37.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-09_21-11-51.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-10_12-48-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-10_12-49-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-10_12-53-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-10_12-54-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-30-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-30-52.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-32-32.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-34-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-34-22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-35-14.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-35-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_20-38-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-08-35.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-08-54.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-09-48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-10-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-11-56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-40-55.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-41-40.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-05-31_21-42-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-37-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-42-36.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-42-48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-43-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-55-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-56-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-56-39.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-56-56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-57-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-57-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-57-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-02_19-57-32.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-03_12-03-56.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-03_12-04-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-03_12-04-40.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-03_12-05-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-14-59.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-18-38.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-18-54.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-19-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-19-37.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-20-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-22-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-22-57.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-24-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_18-27-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_20-09-59.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-04_20-10-47.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_16-59-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-10-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-11-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-13-53.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-15-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-16-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2024-06-29_17-18-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/blocks/sapling.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Minecraft/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Minecraft/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Minecraft/languages/zh.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Minecraft/languages/zh.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/GUI/Button.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/GUI/Button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/META-INF/mods.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/andesite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/belt_animation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/belt_funnel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/belt_pulley.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/belt_support.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/clutch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/cocoa_log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/creative_crate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/crushing_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/crushing_wheel_controller.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/diorite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/dolomite_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/drill.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/encased_belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/encased_fan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/encased_fan_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/encased_shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/entity_detector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/extractor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/flexcrate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/flexpeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/flexpeater_indicator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gabbro_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gearbox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/gearshift.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/granite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/harvester.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/indented_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/indented_gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/large_cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limesand.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/limestone_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/linked_extractor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_bearing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_bearing_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_piston.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_piston_head.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_press.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mechanical_press_head.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/motor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/paved_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/paved_gabbro_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/piston_pole.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/polished_weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/pulse_repeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/redstone_bridge.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/rotation_chassis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/schematic_table.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/schematicannon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/schematicannon_connector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/schematicannon_pipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/shaft_half.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/shop_shelf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/slightly_mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/sticky_mechanical_piston.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/stockswitch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/symmetry_crossplane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/symmetry_plane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/symmetry_tripleplane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/tiled_glass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/tiled_glass_pane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/translation_chassis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/turntable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/water_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/weathered_limestone_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/blockstates/window_in_a_block.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/lang/pt_br.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/lang/ru_ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/lang/zh_cn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/belt_textures.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/downward_end.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/downward_middle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/downward_start.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/horizontal_end.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/horizontal_middle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/horizontal_start.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/upward_end.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/upward_middle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt/upward_start.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt_funnel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt_pulley.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/belt_support.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/clutch_off.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/clutch_on.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/cocoa_log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/cocoa_log_0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/cocoa_log_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/cocoa_log_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/contact_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/creative_crate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/crushing_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/drill.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/drill_fixated.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_belt_attached_horizontal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_belt_attached_vertical.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_fan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_fan_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/encased_shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/entity_detector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/entity_detector_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/entity_detector_with_belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/entity_detector_with_belt_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/extractor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/extractor_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/extractor_wireless.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/extractor_wireless_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flex_crate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flexpeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flexpeater_indicator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flexpeater_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flexpeater_powered_powering.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/flexpeater_powering.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/gearbox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/gearshift_off.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/gearshift_on.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/harvester.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/large_cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/large_wheels.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_bearing_base.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_bearing_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/base.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/base_rotated.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/base_with_extension.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/base_with_extension_rotated.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/pole.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/rotated.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/rotated_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston/temp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston_head.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston_head_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_piston_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_press_base.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/mechanical_press_head.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/motor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/andesite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/diorite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_bricks_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/dolomite_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_bricks_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/gabbro_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/granite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/indented_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/indented_gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/indented_gabbro_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limesand.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_bricks_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/limestone_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/paved_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/paved_gabbro_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/paved_gabbro_bricks_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_limestone_double_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_limestone_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_weathered_limestone_double_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/polished_weathered_limestone_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/slightly_mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass_pane_noside.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass_pane_noside_alt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass_pane_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass_pane_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/tiled_glass_pane_side_alt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_bricks_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_slab_top.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_stairs_inner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_stairs_outer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_wall_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/palettes/weathered_limestone_wall_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/paved_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/pulse_repeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/pulse_repeater_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/pulse_repeater_pulsing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_receiver.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_receiver_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_receiver_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_receiver_side_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_side.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/redstone_bridge_side_powered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_base.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_x.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_x_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_y.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_y_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_z.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/rotation_chassis_side_z_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/schematic_table.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/schematicannon_base.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/schematicannon_connector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/schematicannon_pipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/shaft_half.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/shop_shelf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/stockpile_switch_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/symmetry_crossplane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/symmetry_crossplane_diagonal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/symmetry_plane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/symmetry_tripleplane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/translation_chassis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/translation_chassis_both_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/translation_chassis_bottom_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/translation_chassis_top_sticky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/turntable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/block/water_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/andesite_alloy_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/andesite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/belt_connector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/belt_funnel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/belt_support.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blaze_brass_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blazing_axe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blazing_pickaxe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blazing_shovel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blazing_sword.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blueprint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/blueprint_and_quill.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/chorus_chrome_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/chromatic_compound_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/clutch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/cocoa_log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/creative_crate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/crushing_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/diorite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dolomite_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/dough.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/drill.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/empty_blueprint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/encased_belt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/encased_fan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/encased_shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/entity_detector.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/extractor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/filter.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/flexcrate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/flexpeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/flour.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gabbro_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gearbox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gearshift.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/gold_sheet.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/granite_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/harvester.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/indented_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/indented_gabbro_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/iron_sheet.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/large_cogwheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limesand.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/limestone_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/linked_extractor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/mechanical_bearing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/mechanical_piston.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/mechanical_press.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/motor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/paved_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/paved_gabbro_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/piston_pole.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/accelerator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/amplifier_core.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/body.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/chorus_accelerator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/chorus_amplifier.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/chorus_body.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/chorus_retriever.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/chorus_scope.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/core.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/gold_accelerator.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/gold_amplifier.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/gold_body.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/gold_retriever.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/placement_handgun/gold_scope.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_dolomite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_gabbro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/polished_weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/propeller.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/pulse_repeater.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/redstone_bridge.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/refined_radiance_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/refined_rose_quartz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rose_quartz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rose_quartz_axe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rose_quartz_pickaxe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rose_quartz_shovel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rose_quartz_sword.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/rotation_chassis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/schematic_table.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/schematicannon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shadow_steel_cube.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shadow_steel_mattock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shadow_steel_pickaxe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shadow_steel_sword.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shaft.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/shop_shelf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/slightly_mossy_gabbro_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/sticky_mechanical_piston.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/stockswitch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/symmetry_wand.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/symmetry_wand_bits.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/symmetry_wand_core.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/tiled_glass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/tiled_glass_pane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/translation_chassis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/tree_fertilizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/turntable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/vertical_gearbox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/water_wheel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_bricks_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_bricks_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_bricks_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_slab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/models/item/weathered_limestone_wall.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/andesite_alloy_mesh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/andesite_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/axis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/axis_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/bearing_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/bearing_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/belt_animated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/belt_funnel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/belt_support_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/blaze_brass_mesh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/brass_casing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/brass_casing_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/chorus_chrome_mesh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/clutch_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/clutch_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/cocoa_log_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/cocoa_log_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/cocoa_log_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/contact_front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/contact_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/contact_side_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/creative_crate_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/creative_crate_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/crushing_wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/diorite_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/dolomite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/dolomite_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/dolomite_pillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/dolomite_pillar_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/encased_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/encased_belt_attached.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/entity_detector_front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/entity_detector_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/entity_detector_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/extractor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/extractor_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/fan_blades.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/fan_casing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/fan_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/flex_crate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/flexpeater_item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/flexpeater_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/flexpeater_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/full_gabbro_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gabbro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gabbro_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gearbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gearbox_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gearshift_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/gearshift_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/granite_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indented_gabbro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/indicator/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/limesand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/limestone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/limestone_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/limestone_pillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/limestone_pillar_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/mechanical_press_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/mechanical_press_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/mechanical_press_pole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/mechanical_press_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/mossy_gabbro_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/old_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/piston_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/piston_inner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/pole_end.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_dolomite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_gabbro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_limestone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_limestone_slab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_weathered_limestone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/polished_weathered_limestone_slab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/pulse_repeater.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/pulse_repeater_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_antenna.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_antenna_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_bridge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_bridge_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_bridge_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/redstone_bridge_side_powered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/rotation_chassis_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/rotation_chassis_side_sticky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/rotation_chassis_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/schematic_table_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/schematic_table_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/slightly_mossy_gabbro_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/stockpile_switch_end.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/tiled_glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/translation_chassis_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/translation_chassis_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/translation_chassis_top_sticky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/weathered_limestone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/weathered_limestone_bricks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/weathered_limestone_pillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/weathered_limestone_pillar_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/block/wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/flex_crate_and_stockpile_switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/placement_handgun.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/placement_handgun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/player_inventory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/recipes1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/recipes2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/recipes3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/schematic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/schematic_table.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/schematicannon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/wand_symmetry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/gui/widgets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/andesite_alloy_cube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blaze_brass_cube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blazing_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blazing_pickaxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blazing_shovel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blazing_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blueprint_and_quill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blueprint_empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/blueprint_filled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/chorus_chrome_cube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/chromatic_compound_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/chromatic_compound_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/chromatic_compound_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/dough.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/filter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/filter_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/filter_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/flour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/gold_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/iron_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/propeller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/refined_radiance_cube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/refined_rose_quartz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/rose_quartz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/rose_quartz_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/rose_quartz_pickaxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/rose_quartz_shovel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/rose_quartz_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/shadow_steel_cube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/shadow_steel_mattock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/shadow_steel_pickaxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/shadow_steel_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/item/tree_fertilizer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/assets/create/textures/special/selection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/forge/tags/blocks/glass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/forge/tags/blocks/glass_panes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/forge/tags/items/glass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/forge/tags/items/glass_panes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/minecraft/tags/blocks/impermeable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/minecraft/tags/blocks/jungle_logs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/minecraft/tags/blocks/slabs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/minecraft/tags/blocks/stairs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/data/minecraft/tags/blocks/walls.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create/pack.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Mod/forge/mod_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/Mod/forge/mod_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/Scene.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/Scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/blocks/CubeHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/blocks/CubeHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/blocks/DestroyBlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/blocks/DestroyBlock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/entity/Inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Inventory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/entity/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/entity/Zombie.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/entity/Zombie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/world/Biomes.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/Biomes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/world/PerlinNoise.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/PerlinNoise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/world/worldGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/world/worldGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/game_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/game_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_elements/button_bg_hover.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minecraft_main_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/minecraft_main_program.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saves/Current_world/world.dat" beforeDir="false" afterPath="$PROJECT_DIR$/saves/Current_world/world.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/brick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/cobblestone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/cobblestone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/dirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/dirt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/emerald_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/emerald_ore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/glass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/glowstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/glowstone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/gold_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/gold_ore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/iron_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/iron_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/redstone_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/redstone_ore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/blocks/stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/blocks/stone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/water.png" beforeDir="false" afterPath="$PROJECT_DIR$/textures/water.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/zombie_leg/zombie_leg.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/bedrock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/black_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/block_destroy/destroy_stage_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/blue_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/brick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/brown_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/coal_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/cobblestone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/cyan_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/diamond_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/dirt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/emerald_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/glowstone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/gold_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/gravel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/gray_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/green_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/iron_block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/iron_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/lapis_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/leaves_oak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/leaves_taiga.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/light_blue_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/light_gray_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/lime_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/magenta_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/nocolor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/orange_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/pink_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/planks_oak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/purple_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/red_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/redstone_ore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/sand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/stone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/cactus b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/cactus s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/cactus t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/crafting_table b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/crafting_table s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/crafting_table t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/grass b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/grass s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/grass t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/sandstone b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/sandstone s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/sandstone t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/tnt b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/tnt s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/tbs/tnt t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/ts/log_oak s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/ts/log_oak t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/water.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/white_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/blocks/yellow_wool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/lava.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/lava_flow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/lava_still.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/tall_grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/water.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/water_flow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures_/water_still.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,15 +837,38 @@
     "Python.Inventory.executor": "Run",
     "Python.PerlinNoise.executor": "Run",
     "Python.Player.executor": "Run",
+    "Python.dfjklceftuioefuioiofjio.executor": "Run",
     "Python.minecraft_main_program.executor": "Run",
+    "Python.rtc.executor": "Run",
+    "Python.sfg.executor": "Run",
+    "Python.sfg10.executor": "Run",
+    "Python.sfg11.executor": "Run",
+    "Python.sfg2.executor": "Run",
+    "Python.sfg3.executor": "Run",
+    "Python.sfg4.executor": "Run",
+    "Python.sfg5.executor": "Run",
+    "Python.sfg6.executor": "Run",
+    "Python.sfg7.executor": "Run",
+    "Python.sfg8.executor": "Run",
+    "Python.sfg9.executor": "Run",
+    "Python.sp.executor": "Run",
+    "Python.sp2.executor": "Run",
+    "Python.sp3.executor": "Run",
+    "Python.sp4.executor": "Run",
+    "Python.sp5.executor": "Run",
+    "Python.stg7.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.yee.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Mob-Test1",
-    "last_opened_file_path": "C:/Users/leibniz/Desktop/Documents/all python/Minecraft_python_Edition/minecraft_main_program.py"
+    "git-widget-placeholder": "GUI-UPGRADE1",
+    "last_opened_file_path": "C:/Users/leibniz/Desktop/Documents/all python/Minecraft_python_Edition - Copy (2)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition" />
       <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\assets\Minecraft\textures\gui\title\background" />
       <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\assets\Minecraft\textures\gui\title\background\16x" />
       <recent name="C:\Users\leibniz\Desktop\Documents\all python\Minecraft_python_Edition\" />
@@ -283,7 +1039,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game/Scene.py</url>
-          <line>78</line>
+          <line>80</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -297,8 +1053,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/minecraft_main_program.py</url>
-          <line>682</line>
+          <line>656</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/minecraft_main_program.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

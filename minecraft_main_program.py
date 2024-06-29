@@ -1,3 +1,5 @@
+import datetime
+import logging
 import gc
 import math
 import os
@@ -23,10 +25,22 @@ from settings import *
 import settings
 from game.Mod.forge import mod_loader
 
+log_filename = './logs/' + datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S') + '.log'
+logging.basicConfig(
+    filename=log_filename,
+    filemode='w+',
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.DEBUG
+)
+
 lang_choose = ["en", "zh"]
 
 pyglet.options['debug_gl'] = False
 
+
+def log_deb(msg):
+    logging.debug(msg)
+    print(msg)
 
 def choose_langs():
     global lang_choose, mainFunction
@@ -42,22 +56,32 @@ def choose_langs():
 
 
 def respawn():
+    log_deb("respawning...")
     pause()
+    log_deb("setting player health point...")
     player.hp = 20
     player.playerDead = False
+    log_deb("setting player position...")
     player.position = scene.startPlayerPos
     player.lastPlayerPosOnGround = scene.startPlayerPos
 
 
 def saveWorld(worldGen, save_path):
     blocks = worldGen.blocks
-    with open(save_path.join("/world.dat"), "wb") as world_data_file:
-        pickle.dump(blocks, world_data_file, protocol=pickle.HIGHEST_PROTOCOL)
+    try:
+        logging.info("Saving chunks for level 'Default'")
+        with open(save_path + "/world.dat", "wb") as world_data_file:
+            pickle.dump(blocks, world_data_file, protocol=pickle.HIGHEST_PROTOCOL)
+    except FileNotFoundError as error_msg:
+        logging.warning(f"WARNING: {error_msg}")
+        print(f"WARNING: {error_msg} please check the log file")
     print("Successfully saved world ")
 
 
 def quit_to_menu():
+    log_deb("quitting to menu...")
     global PAUSE, IN_MENU, mainFunction
+    log_deb("saving world...")
     saveWorld(scene.worldGen, "saves/Current_world")
     tex = gui.GUI_TEXTURES["options_background"]
     tex2 = gui.GUI_TEXTURES["black"]
@@ -68,16 +92,16 @@ def quit_to_menu():
     drawInfoLabel(scene, translations["quit.mainmenu"], xx=scene.WIDTH // 2, yy=scene.HEIGHT // 2,
                   style=[('', '')], size=12, anchor_x='center')
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
     PAUSE = True
     IN_MENU = True
 
     sound.initMusic(False)
-
+    log_deb("playing musics...")
     sound.musicPlayer.play()
     sound.musicPlayer.set_volume(sound.volume)
-
+    log_deb("resetting scene...")
     scene.resetScene()
     scene.initScene()
 
@@ -110,9 +134,11 @@ def close_settings():
 
 
 def start_new_game():
+    log_deb("starting new game, hang on tight!")
     global mainFunction
     if not os.path.exists("saves/Current_world"):
         os.makedirs("saves/Current_world")
+    
     sound.musicPlayer.stop()
     sound.initMusic(True)
     scene.worldGen = worldGenerator(scene, translateSeed(seedEditArea.text))
@@ -120,6 +146,7 @@ def start_new_game():
 
 
 def pause():
+    log_deb("pausing")
     global PAUSE, mainFunction
     PAUSE = not PAUSE
     scene.allowEvents["movePlayer"] = True
@@ -143,29 +170,33 @@ def draw_command(mc):
     commandEditArea.y = scene.HEIGHT // 2 - (commandEditArea.bg.height // 2)
     commandEditArea.update(mp, mc, _keys)
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def draw_panorama_menu(mc):
     def cpt_16x():
+        log_deb("changing panorama...")
         with open("assets/Minecraft/panorama.txt", "w") as f:
             f.write(fr"assets/Minecraft/textures/gui/title/background/16x/")
             f.close()
         print("done")
 
     def cpt_17x():
+        log_deb("changing panorama...")
         with open("assets/Minecraft/panorama.txt", "w") as f:
             f.write(fr"assets/Minecraft/textures/gui/title/background/17x/")
             f.close()
         print("done")
 
     def cpt_120x():
+        log_deb("changing panorama...")
         with open("assets/Minecraft/panorama.txt", "w") as f:
             f.write(fr"assets/Minecraft/textures/gui/title/background/120x/")
             f.close()
         print("done")
 
     def rp():
+        log_deb("changing panorama...")
         with open("assets/Minecraft/panorama.txt", "w") as f:
             f.write("gui/bg/")
             f.close()
@@ -203,7 +234,7 @@ def draw_panorama_menu(mc):
     closeSettingsButton.y = scene.HEIGHT // 2 - (closeSettingsButton.button.height // 2) + 180
     closeSettingsButton.update(mp, mc)
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def draw_settings_menu(mc):
@@ -250,7 +281,7 @@ def draw_settings_menu(mc):
     sound.volume = soundVolumeSliderBox.val / 100
 
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def draw_death_screen(mc):
@@ -280,7 +311,7 @@ def draw_death_screen(mc):
     #
 
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def pause_menu(mc):
@@ -310,7 +341,7 @@ def pause_menu(mc):
     #
 
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def gen_world(mc):
@@ -337,7 +368,7 @@ def gen_world(mc):
                   style=[('', '')], size=12, anchor_x='center')
 
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
 
 
 def draw_main_menu(mc):
@@ -409,7 +440,7 @@ def draw_main_menu(mc):
     #
 
     pygame.display.flip()
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
     mainMenuRotation[0] = 0
     # if mainMenuRotation[0] < 75:
     #     mainMenuRotation[2] = False
@@ -426,33 +457,33 @@ def draw_main_menu(mc):
 
 
 if settings.DEBUG:
-    print("PyOpenGL version: ", OpenGL.__version__)
-    print("PyOpenGL platform: ", OpenGL.platform)
-    print("PyOpenGL extensions: ", OpenGL.GL.glGetString(OpenGL.GL.GL_EXTENSIONS))
-    print("PyOpenGL renderer: ", OpenGL.GL.glGetString(OpenGL.GL.GL_RENDERER))
-    print("PyOpenGL vendor: ", OpenGL.GL.glGetString(OpenGL.GL.GL_VENDOR))
-    print("PyOpenGL GL version: ", OpenGL.GL.glGetString(OpenGL.GL.GL_VERSION))
-    print("Pygame Version:", pygame.version.ver)
-    print("Pygame array interface:", pygame.get_array_interface)
-    print("Pygame display driver:", pygame.display.get_driver())
-    print("Pygame display info:", pygame.display.Info())
-    print("Pyglet version:", pyglet.version)
-    print("Pyglet platform:", pyglet.compat_platform)
-    print("Pyglet display driver:", pyglet.canvas.get_display())
-    print("Pyglet display info:", pyglet.canvas.get_display().get_default_screen())
-    print("Python Version:", sys.version)
-    print("Python Platform:", sys.platform)
-    print("Python Path:", sys.path)
-    print("Python Executable:", sys.executable)
-    print("PID process: ", os.getpid())
-    print("PATH : ", os.get_exec_path())
+    log_deb(f"PyOpenGL version: {OpenGL.__version__}")
+    log_deb(f"PyOpenGL platform: {OpenGL.platform}")
+    log_deb(f"PyOpenGL extensions: {OpenGL.GL.glGetString(OpenGL.GL.GL_EXTENSIONS)}", )
+    log_deb(f"PyOpenGL renderer: {OpenGL.GL.glGetString(OpenGL.GL.GL_RENDERER)}")
+    log_deb(f"PyOpenGL vendor: {OpenGL.GL.glGetString(OpenGL.GL.GL_VENDOR)}")
+    log_deb(f"PyOpenGL GL version: {OpenGL.GL.glGetString(OpenGL.GL.GL_VERSION)}")
+    log_deb(f"Pygame Version:{pygame.version.ver}")
+    log_deb(f"Pygame array interface:{pygame.get_array_interface}")
+    log_deb(f"Pygame display driver:{pygame.display.get_driver()}")
+    log_deb(f"Pygame display info:{pygame.display.Info()}")
+    log_deb(f"Pyglet version:{pyglet.version}", )
+    log_deb(f"Pyglet platform:{pyglet.compat_platform}")
+    log_deb(f"Pyglet display driver:{pyglet.canvas.get_display()}")
+    log_deb(f"Pyglet display info:{pyglet.canvas.get_display().get_default_screen()}")
+    log_deb(f"Python Version:{sys.version}")
+    log_deb(f"Python Platform:{sys.platform}")
+    log_deb(f"Python Path:{sys.path}")
+    log_deb(f"Python Executable:{sys.executable}")
+    log_deb(f"PID process: {os.getpid()}")
+    log_deb(f"PATH : {os.get_exec_path()}")
 
-print("Loading the game...")
+logging.info("Loading the game...")
 
 resizeEvent = False
 LAST_SAVED_RESOLUTION = [WIDTH, HEIGHT]
 pygame.mixer.pre_init(44100, 16, 2, 4096)
-screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE, vsync=1)
 
 # Loading screen
 glClearColor(1, 1, 1, 1)
@@ -464,7 +495,7 @@ glMatrixMode(GL_PROJECTION)
 glLoadIdentity()
 gluOrtho2D(0, WIDTH, 0, HEIGHT)
 
-logo = pyglet.resource.image("gui/logo.png")
+logo = pyglet.resource.image("gui/mojang_studios.jpg")
 logo.blit(WIDTH // 2 - (logo.width // 2), HEIGHT // 2 - (logo.height // 2))
 pygame.display.flip()
 #
@@ -486,8 +517,8 @@ scene.deathScreen = death_screen
 scene.initScene()
 ModLoader = mod_loader.ModLoader(gl=scene, sound=sound, settings=settings, player=player, gui=gui, gc=gc)
 ModLoader.try_better()
-
-print("Loading sounds...")
+logging.info("setting player: happyleibniz")
+logging.info("Loading sounds...")
 sound.BLOCKS_SOUND["pickUp"] = pygame.mixer.Sound("sounds/pick.mp3")
 
 print("Loading step sounds...")
@@ -587,87 +618,30 @@ gui.GUI_TEXTURES = {
 }
 
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
-
-texture = gui.GUI_TEXTURES["crafting_table"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["inventory_window"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["inventory"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["sel_inventory"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["fullheart"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["halfheart"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["heartbg"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["game_logo"]
-texture.width /= 2
-texture.height /= 2
-
-texture = gui.GUI_TEXTURES["button_bg"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["button_bg_hover"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["edit_bg"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["options_background"]
-texture.width *= 6
-texture.height *= 6
-
-texture = gui.GUI_TEXTURES["black"]
-texture.width *= 6
-texture.height *= 6
-
-texture = gui.GUI_TEXTURES["red"]
-texture.width *= 6
-texture.height *= 6
-
-texture = gui.GUI_TEXTURES["selected"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["slider"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["language"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["language_hover"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["button_bg_half"]
-texture.width *= 2
-texture.height *= 2
-
-texture = gui.GUI_TEXTURES["button_bg_hover_half"]
-texture.width *= 2
-texture.height *= 2
-
+this_ = [
+    'crafting_table', "inventory_window", "inventory", "sel_inventory",
+    "fullheart", "halfheart", "heartbg", "button_bg",
+    "button_bg_hover", "edit_bg", "selected", "slider", "language",
+    "language_hover", "button_bg_half", "button_bg_hover_half"
+]
+this__ = [
+    "options_background", "black", "red"
+]
+this___ = [
+    "game_logo",
+]
+for i in this_:
+    texture = gui.GUI_TEXTURES[i]
+    texture.width *= 2
+    texture.height *= 2
+for i in this__:
+    texture = gui.GUI_TEXTURES[i]
+    texture.width *= 6
+    texture.height *= 6
+for i in this___:
+    texture = gui.GUI_TEXTURES[i]
+    texture.width /= 2
+    texture.height /= 2
 gui.addGuiElement("crosshair", (scene.WIDTH // 2 - 9, scene.HEIGHT // 2 - 9))
 
 player.inventory.initWindow()
@@ -689,7 +663,6 @@ singleplayer_button = Button(scene, translations["singleplayer"], 0, 0)
 quitButton = Button(scene, translations["quit_game"], 0, 0)
 lang_bb = Button(scene, "", 0, 0, button=gui.GUI_TEXTURES['language'],
                  button_hovered=gui.GUI_TEXTURES['language_hover'])
-
 singleplayer_button.setEvent(start_new_game)
 quitButton.setEvent(exit)
 
@@ -758,14 +731,14 @@ while True:
                     HEIGHT = monitor.current_h
                     screen = pygame.display.set_mode((monitor.current_w, monitor.current_h),
                                                      pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE
-                                                     | pygame.FULLSCREEN)
+                                                     | pygame.FULLSCREEN, vsync=1)
                     scene.resizeCGL(WIDTH, HEIGHT)
                     resizeEvent = True
                 else:
                     WIDTH = LAST_SAVED_RESOLUTION[0]
                     HEIGHT = LAST_SAVED_RESOLUTION[1]
                     screen = pygame.display.set_mode((WIDTH, HEIGHT),
-                                                     pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE)
+                                                     pygame.DOUBLEBUF | pygame.OPENGL | pygame.RESIZABLE, vsync=1)
                     scene.resizeCGL(WIDTH, HEIGHT)
                     resizeEvent = True
         if event.type == pygame.VIDEORESIZE:
@@ -827,7 +800,7 @@ while True:
                         player.mouseEvent(1)
                     else:
                         player.mouseEvent(-1)
-            clock.tick(MAX_FPS)
+            # clock.tick(MAX_FPS)
     if scene.allowEvents["grabMouse"]:
         pygame.mouse.set_visible(PAUSE)
     else:
@@ -860,9 +833,9 @@ while True:
                                  f"Looking at: {scene.lookingAt}\n"
                                  f"Count of chunks: {scene.worldGen.start - len(scene.worldGen.queue)} "
                                  f"({scene.worldGen.start})",
-                          shadow=False, label_color=(224, 224, 224), xx=3)
+                          shadow=False, label_color=(224, 224, 224), xx=3,yy=100)
         pygame.display.flip()
-        clock.tick(MAX_FPS)
+        # clock.tick(MAX_FPS)
     elif PAUSE and not IN_MENU:
         scene.allowEvents["movePlayer"] = False
         scene.allowEvents["keyboardAndMouse"] = False
@@ -876,4 +849,4 @@ while True:
         gui.update()
 
         mainFunction(mbclicked)
-        clock.tick(MAX_FPS)
+        # clock.tick(MAX_FPS)

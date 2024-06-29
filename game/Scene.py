@@ -4,7 +4,7 @@ import threading
 import pyglet.image
 from OpenGL.GLU import *
 from pyglet.gl import *
-
+from OpenGL.GL import *
 from functions import *
 from game.Lighting.Light import Light
 from game.Particles import Particles
@@ -15,7 +15,7 @@ from game.entity.Zombie import Zombie
 from game.world.Clouds import Clouds
 from game.world.worldGenerator import worldGenerator
 from game.blocks.CubeHandler import CubeHandler
-
+import logging
 
 class Scene:
     def __init__(self):
@@ -23,6 +23,7 @@ class Scene:
         self.zombie_leg_texture = {}
         self.zombie_hand_texture = {}
         print("Init Scene class...")
+        logging.debug("Init Scene class...")
 
         self.WIDTH, self.HEIGHT = WIDTH, HEIGHT
 
@@ -31,7 +32,6 @@ class Scene:
         self.blockSound = None
         self.deathScreen = None
         self.player = None
-
         self.lookingAt = "Nothing"
 
         self.texture, self.block, self.texture_dir, self.inventory_textures = {}, {}, {}, {}
@@ -44,6 +44,8 @@ class Scene:
         self.in_water = False
 
         self.resetScene()
+
+    
 
     def resetScene(self):
         self.allowEvents = {
@@ -128,7 +130,7 @@ class Scene:
 
     def initScene(self):
         print("Init OpenGL scene...")
-
+        logging.debug("initializing OpenGL Renderer")
         glClearColor(0.5, 0.7, 1, 1)
         glClearDepth(1.0)
         glEnable(GL_DEPTH_TEST)
@@ -154,13 +156,15 @@ class Scene:
         self.stuffBatch = pyglet.graphics.Batch()
         self.player.inventory = Inventory(self)
         self.cubes = CubeHandler(self.opaque, self.block, self.opaque,
-                                 ('leaves_taiga', 'leaves_oak', 'tall_grass', 'nocolor'), self)
+                                 ('leaves_taiga', 'leaves_oak', 'tall_grass', 'nocolor', 'sapling'), self)
 
         self.zombie = Zombie(self)
         self.zombie.position = [0, 100, 0]
         self.entity.append(self.zombie)
 
         self.set3d()
+
+    
 
     def set2d(self):
         glMatrixMode(GL_PROJECTION)

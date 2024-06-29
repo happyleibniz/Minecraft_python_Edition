@@ -1,4 +1,4 @@
-import subprocess,traceback,platform,logging,time,psutil
+import subprocess,traceback,platform,logging,time, psutil
 if str(platform.system()) == "Linux" or str(platform.system()) == "Windows":
     try:
         _a_ = subprocess.check_output(['pip','install','pyglet==1.5.28','pygame','numpy','pyopengl==3.1.5'])
@@ -7,7 +7,7 @@ if str(platform.system()) == "Linux" or str(platform.system()) == "Windows":
         if 'Requirement already satisfied: pygame' in str(_a_):
             print("You have already installed pygame.")
         if 'Requirement already satisfied: numpy' in str(_a_):
-            print("You have already installed numpyt.")
+            print("You have already installed numpy.")
         if 'Requirement already satisfied: pyopengl' in str(_a_):
             print("You have already installed pyopengl==3.1.5.")
     except subprocess.CalledProcessError as e:

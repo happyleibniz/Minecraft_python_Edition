@@ -2,12 +2,17 @@ all_biomes = ["forest", "desert", "ocean", "taiga", "mountains", "big_mountains"
 
 
 def getBiomeByTemp(temp):
-    if 30 > temp > 5:
+    print(temp)
+    """
+     9:0.7
+    =1:0.77777777777777777777777777777777777777777777777777
+    """
+    # if 50 > temp > 3.57
+    if -5 > temp > 5:
+        print(f"{temp} is Forest")
         return all_biomes[0]  # Forest
     if temp > 30:
         return all_biomes[1]  # Desert
-    if 7.5 > temp > 6:
-        return all_biomes[2]
     if 5 > temp > -5:
         return all_biomes[4]  # mountains
     if 3 > temp > -3:

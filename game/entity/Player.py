@@ -17,7 +17,7 @@ class Player:
         print("Init Player class...")
         self.is_spectator = False
         self.position, self.rotation = [x, y, z], rotation
-        self.speed = 0.06
+        self.speed = 0.04
         self.gl = gl
         self.gl.allowEvents.setdefault("collisions", True)
         self.gravity = 5.8
@@ -129,9 +129,9 @@ class Player:
                     self.kD -= minKd
             if key[pygame.K_SPACE]:
                 if self.is_spectator:
+                    print(self.position[1])
                     self.position[1] += 0.08
                 else:
-                    self.jump()
                     if key[pygame.K_w]:
                         self.kW = 2
                     if key[pygame.K_a]:
@@ -140,6 +140,7 @@ class Player:
                         self.kS = 2
                     if key[pygame.K_d]:
                         self.kD = 2
+                    self.jump()
             if key[pygame.K_LSHIFT]:
                 if self.is_spectator:
                     self.position[1] -= 0.05
@@ -173,7 +174,7 @@ class Player:
 
     def jump(self):
         if not self.dy:
-            self.dy = 4
+            self.dy = 5.5
 
     def move(self, dt, dx, dy, dz):
         dt = 0.009
@@ -200,17 +201,17 @@ class Player:
                 if col2 in self.gl.cubes.cubes and self.shift <= 0:
                     self.gl.blockSound.playStepSound(self.gl.cubes.cubes[col2].name)
             # Dynamic FOV
-            # if self.position[0] != col[0] or self.position[2] != col[2]:
-            #    if self.gl.fov < FOV + 20:
-            #        self.gl.fov += 0.2
-            #    else:
-            #        self.gl.fov = FOV + 20
-            # else:
-            #    if self.gl.fov > FOV:
-            #        self.gl.fov -= 0.2
-            #    else:
-            #        self.gl.fov = FOV
-            #
+            if self.position[0] != col[0] or self.position[2] != col[2]:
+                if self.gl.fov < FOV + 20:
+                    self.gl.fov += 0.2
+                else:
+                    self.gl.fov = FOV + 20
+            else:
+                if self.gl.fov > FOV:
+                    self.gl.fov -= 0.2
+                else:
+                    self.gl.fov = FOV
+
             if not self.bInAir:
                 for i in range(1, 6):
                     col21 = roundPos((col[0], col[1] - i, col[2]))

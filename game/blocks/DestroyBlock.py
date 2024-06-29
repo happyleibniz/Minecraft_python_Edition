@@ -84,7 +84,10 @@ class DestroyBlock:
             self.destroyStage = -1
             if blockByVec[0] in self.gl.cubes.cubes:
                 print(self.gl.cubes.cubes[blockByVec[0]].name)
-                self.gl.droppedBlock.addBlock(blockByVec[0], self.gl.cubes.cubes[blockByVec[0]].name)
+                if str(self.gl.cubes.cubes[blockByVec[0]].name) == "leaves_oak":
+                    self.gl.droppedBlock.addBlock(blockByVec[0], "sapling")
+                else:
+                    self.gl.droppedBlock.addBlock(blockByVec[0], self.gl.cubes.cubes[blockByVec[0]].name)
 
             self.gl.blockSound.playBlockSound(self.gl.cubes.cubes[blockByVec[0]].name)
             self.gl.particles.addParticle(self.gl.cubes.cubes[blockByVec[0]].p, self.gl.cubes.cubes[blockByVec[0]],

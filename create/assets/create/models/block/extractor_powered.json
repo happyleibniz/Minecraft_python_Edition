@@ -1,7 +1,0 @@
-{
-	"parent": "create:block/extractor",
-    "textures": {
-        "extractor": "create:block/extractor_powered",
-		"particle": "create:block/extractor_powered"
-    }
-}

@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Create
-Implementation-Version: mc1.14.4_v0.1.1a
-Specification-Vendor: simibubi
-Specification-Title: create
-Implementation-Timestamp: 2019-10-22T00:14:29+0200
-Specification-Version: 1
-Implementation-Vendor: simibubi
-
